@@ -2,6 +2,7 @@ package controllers
 
 import play.api._
 import play.api.mvc._
+import com.tajpure.scheme.compiler.parser._
 
 object Application extends Controller {
   
@@ -10,13 +11,13 @@ object Application extends Controller {
   }
   
   def lex(source: String) = Action {
-//    val result = LexParser.lex(source)
-//    printf(result)
-    Ok(source)
+    val res = LexParser.lex(source)
+    Ok(res)
   }
   
   def parse(source: String) = Action {
-    Ok(source)
+    val res = Parser.parseSource(source)
+    Ok(res)
   }
   
   def ir(source: String) = Action {

@@ -3,8 +3,6 @@ var eidtor = null;
 function initEditor() {
 	editor = ace.edit("editor");
 	editor.setTheme("ace/theme/twilight");
-	var JavaScriptMode = require("ace/mode/sql").Mode;
-	editor.getSession().setMode(new JavaScriptMode());
 }
 
 var editor0 = null;
@@ -12,8 +10,6 @@ var editor0 = null;
 function initEditor0() {
 	editor0 = ace.edit("editor0");
 	editor0.setTheme("ace/theme/twilight");
-	var JavaScriptMode = require("ace/mode/scheme").Mode;
-	editor0.getSession().setMode(new JavaScriptMode());
 }
 
 function doGet(_url) {
