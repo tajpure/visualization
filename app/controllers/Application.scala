@@ -5,8 +5,8 @@ import play.api.mvc._
 
 object Application extends Controller {
   
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+  def main = Action {
+    Ok(views.html.main("visualization")(views.html.content("visualization")))
   }
   
 }
