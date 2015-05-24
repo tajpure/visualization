@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(title: String)
 
 <!DOCTYPE html>
 
@@ -8,8 +8,26 @@
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/ace/ace.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/ace/mode-sql.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/ace/theme-twilight.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/visual.js")" type="text/javascript"></script>
     </head>
     <body>
-        @content
+    <ul>
+  <li><a href="javascript:lex()" class="round green">Lexical analysis<span class="round">词法分析</span></a></li>
+  <li><a href="javascript:parse()" class="round red">Syntax analysis<span class="round">语法分析</span></a></li>
+	<li><a href="javascript:ir()" class="round yellow">Intermediate Code<span class="round">语义分析和中间代码生成</span></a></li>
+	<li><a href="javascript:target()" class="round green">Target Code<span class="round">目标代码生成</span></a></li>
+	<li><a href="javascript:exec()" class="round red">Execute<span class="round">执行</span></a></li>
+</ul>
+<div id="input">Input:</div>
+<div id="editor"></div>
+<div id="output">Output:</div>
+<div id="editor0"></div>
+				<script type="text/javascript">
+					initEditor()
+					initEditor0()
+				</script>
     </body>
 </html>
