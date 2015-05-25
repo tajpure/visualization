@@ -3,8 +3,8 @@ package com.tajpure.scheme.compiler
 import com.tajpure.scheme.compiler.parser.Parser
 import com.tajpure.scheme.compiler.llvm.CodeGen
 import com.tajpure.scheme.compiler.util.FileUtils
-import org.jllvm.NativeLibrary
 import com.tajpure.scheme.compiler.util.Log
+import org.jllvm.NativeLibrary
 import java.io.IOException
 
 class Compiler(val file: String) {

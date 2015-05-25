@@ -27,7 +27,7 @@ class Let(val bindings: List[Node], val body: Node, _file: String, _start: Int, 
   
   override
   def toString(): String = {
-    "Let=>" + bindings + " " + body 
+    "Let:(\n" + bindings + " " + body + "\n)" 
   }
   
 }

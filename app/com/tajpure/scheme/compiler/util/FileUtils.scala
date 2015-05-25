@@ -3,6 +3,9 @@ package com.tajpure.scheme.compiler.util
 import java.io.File
 import java.io.FileNotFoundException
 import com.tajpure.scheme.compiler.exception.ParserException
+import scala.io.Source
+import java.nio.file.{Paths, Files}
+import java.nio.charset.StandardCharsets
 
 object FileUtils {
   
@@ -20,6 +23,10 @@ object FileUtils {
       case e0 : FileNotFoundException => throw e0
       case e1 : Exception => throw e1
     }
+  }
+  
+  def save(path: String, content: String): Unit = {
+    Files.write(Paths.get(path), content.getBytes(StandardCharsets.UTF_8))
   }
   
   def getAbsolutePath(path: String): String = {

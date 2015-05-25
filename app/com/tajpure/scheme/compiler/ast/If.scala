@@ -78,7 +78,7 @@ class If(val test: Node, val then: Node, val _else: Node, _file: String, _start:
   
   override
   def toString(): String = {
-    "If=>" + test + " " + then + " " + _else
+    "If:(\n" + test + " " + then + " " + _else + "\n)"
   }
   
 }

@@ -2,6 +2,7 @@ package controllers
 
 import play.api._
 import play.api.mvc._
+import com.tajpure.scheme.compiler._
 import com.tajpure.scheme.compiler.parser._
 
 object Application extends Controller {
@@ -21,14 +22,12 @@ object Application extends Controller {
   }
   
   def ir(source: String) = Action {
-    Ok(source)
+    var res = Main.codegen(source)
+    Ok(res)
   }
   
   def target(source: String) = Action {
-    Ok(source)
-  }
-  
-  def exec(source: String) = Action {
-    Ok(source)
+     var res = Main.bitcode(source)
+    Ok(res)
   }
 }

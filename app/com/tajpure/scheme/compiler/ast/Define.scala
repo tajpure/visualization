@@ -39,7 +39,7 @@ class Define(val pattern: Node, val value: Node, _file: String, _start: Int, _en
   
   override
   def toString(): String = {
-    "Define=>" + "define " + pattern.toString() + " " + value.toString()
+    "Define:(\n" + "   " + pattern.toString() + " " + value.toString() +"\n)"
   }
 
 }

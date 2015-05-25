@@ -40,7 +40,7 @@ class Block(val statements: List[Node], _file: String, _start: Int, _end: Int, _
   
   override
   def toString(): String = {
-    "Block=>" + statements.foldLeft("")((content: String, node: Node) => content + node.toString())
+    "Block:(\n" + statements.foldLeft("")((content: String, node: Node) => "  " + content + node.toString()) + "\n)"
   }
 
 }

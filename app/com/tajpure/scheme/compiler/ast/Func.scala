@@ -92,7 +92,7 @@ class Func(val params: Node, val propertyForm: Scope, val body: Node, _file: Str
   
   override
   def toString: String = {
-    "Function=>" + "function args:" + params + " body:" + body
+    "Function:(\n" + "   args:" + params + " body:" + body + "\n)"
   }
   
 }

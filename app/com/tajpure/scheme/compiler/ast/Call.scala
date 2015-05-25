@@ -151,7 +151,7 @@ class Call(val op: Node, val args: Argument, _file: String, _start: Int, _end: I
   
   override
   def toString(): String = {
-    "Call=>" + op + args.toString()
+    "Call:(\n " + op + args.toString() + "\n)"
   }
   
 }

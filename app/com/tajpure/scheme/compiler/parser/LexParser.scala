@@ -292,7 +292,9 @@ object LexParser extends App {
        }
      }
      loop()
-     tokens.toString()
+     tokens.foldLeft("")((result, token) => {
+       result + token + "\n"
+     })
   }
   
   println(lex("(define x 1)"))

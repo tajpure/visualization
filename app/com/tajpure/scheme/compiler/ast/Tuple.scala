@@ -33,12 +33,12 @@ class Tuple(val elements: List[Node], val open: Node, val close: Node, _file: St
   def toString(): String = {
     val sb: StringBuilder = new StringBuilder(open.toString())
     for((node,i) <- elements.view.zipWithIndex) {
-      sb.append(node.toString())
+      sb.append(" ").append(node.toString())
       if (i != elements.size - 1)
         sb.append(" ")
     }
     sb.append(close.toString())
-    "Tuple=>" + sb.toString()
+    "Tuple:(\n  " + sb.toString() + "\n)"
   }
   
 }
